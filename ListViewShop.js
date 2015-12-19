@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react-native');
-var DataCell = require('./DataCell.js');
+var ShopCell = require('./ShopCell.js');
 var CoffeeShop = require('./CoffeeShop.js');
 var config = require('./configAPI.json');
 
@@ -16,7 +16,7 @@ var {
   Image
 } = React;
 
-class ListViewData extends React.Component {
+class ListViewShop extends React.Component {
 
   constructor(props) {
     super(props);
@@ -48,7 +48,7 @@ class ListViewData extends React.Component {
 
   renderRow(currentRow) {
     return (
-      <DataCell coffeeShop={currentRow}/>
+      <ShopCell coffeeShop={currentRow}/>
     );
   }
 
@@ -68,4 +68,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = ListViewData;
+module.exports = ListViewShop;

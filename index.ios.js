@@ -20,7 +20,7 @@ var CoffeApp = React.createClass({
         style={{flex:1}}
         initialRoute={{
           component: MainView,
-          title: 'My View Title'
+          title: 'Coffee shop ☕️'
         }}
         />
     );

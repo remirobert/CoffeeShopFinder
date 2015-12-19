@@ -9,7 +9,7 @@ var {
   View
 } = React;
 
-class DataCell extends React.Component {
+class ShopCell extends React.Component {
 
   constructor(props) {
     super(props);
@@ -65,4 +65,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = DataCell;
+module.exports = ShopCell;

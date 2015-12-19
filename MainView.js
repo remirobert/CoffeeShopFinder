@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react-native');
-var ListViewData = require('./ListViewData.js');
+var ListViewShop = require('./ListViewShop.js');
 
 var {
   AppRegistry,
@@ -18,7 +18,7 @@ class MainView extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <ListViewData/>
+        <ListViewShop/>
       </View>
     );
   }
