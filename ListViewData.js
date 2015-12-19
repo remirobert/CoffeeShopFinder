@@ -31,12 +31,9 @@ class ListViewData extends React.Component {
     fetch(REQUEST_URL)
     .then((response) => response.json())
     .then((responseData) => {
-      console.log("debug");
       console.log(responseData.response);
       var coffees = responseData.response.venues.map(function(currentItem) {
-        return new  CoffeeShop({
-          name: currentItem.name
-        });
+        return new  CoffeeShop(currentItem);
       });
       this.setState({
         dataSource: this.state.dataSource.cloneWithRows(coffees)
@@ -56,7 +53,6 @@ class ListViewData extends React.Component {
   }
 
   render() {
-    console.log("render list");
     return (
       <ListView style={styles.list}
       dataSource={this.state.dataSource}

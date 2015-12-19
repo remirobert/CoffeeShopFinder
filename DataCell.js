@@ -21,8 +21,11 @@ class DataCell extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.textTitle}>
+        <Text style={styles.nameShop}>
           {this.state.coffeeShop.name}
+        </Text>
+        <Text style={styles.addressShop}>
+          {this.state.coffeeShop.address}
         </Text>
       </View>
     );
@@ -37,8 +40,14 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  textTitle: {
+  nameShop: {
     height: 50,
+    fontSize: 15,
+    color: 'blue'
+  },
+  addressShop: {
+    height: 50,
+    fontSize: 10,
     color: 'blue'
   }
 });
