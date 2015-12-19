@@ -31,6 +31,8 @@ class ListViewData extends React.Component {
     fetch(REQUEST_URL)
     .then((response) => response.json())
     .then((responseData) => {
+      console.log("debug");
+      console.log(responseData.response);
       var coffees = responseData.response.venues.map(function(currentItem) {
         return new  CoffeeShop({
           name: currentItem.name
