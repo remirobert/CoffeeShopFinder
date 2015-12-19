@@ -3,10 +3,9 @@
 var React = require('react-native');
 var DataCell = require('./DataCell.js');
 var CoffeeShop = require('./CoffeeShop.js');
+var config = require('./configAPI.json');
 
-var CLIENT_ID = "AREWTY4KWJEDLALROY0VZWTJ5XFTCITLH2LXZU3WP2OJ1MQW";
-var CLIENT_SECRET = "M2JLJHXBY2CO2V1F05XZMCH3U143BO5MTFDK3MRV0WB5DSG0";
-var REQUEST_URL = "https://api.foursquare.com/v2/venues/search?client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&v=20130815&ll=40.7,-74&query=coffee"
+var REQUEST_URL = "https://api.foursquare.com/v2/venues/search?client_id=" + config.CLIENT_ID + "&client_secret=" + config.CLIENT_SECRET + "&v=20130815&ll=40.7,-74&query=coffee"
 
 var {
   AppRegistry,
