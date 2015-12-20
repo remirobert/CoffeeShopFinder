@@ -6,6 +6,7 @@ var ListViewShop = require('./ListViewShop.js');
 var {
   AppRegistry,
   StyleSheet,
+  NavigatorIOS,
   View
 } = React;
 
@@ -16,9 +17,10 @@ class MainView extends React.Component {
   }
 
   render() {
+    // console.log(this.props.navigator);
     return (
       <View style={styles.container}>
-        <ListViewShop/>
+        <ListViewShop navigator={this.props.navigator}/>
       </View>
     );
   }
