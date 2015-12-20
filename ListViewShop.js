@@ -13,18 +13,27 @@ var {
   ListView,
   Text,
   View,
-  Image
+  Image,
+  TouchableHighlight
 } = React;
 
 class ListViewShop extends React.Component {
 
   constructor(props) {
     super(props);
+    this.renderRow = this.renderRow.bind(this);
 
     var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
+      coffees: [],
       dataSource: ds.cloneWithRows([])
     };
+  }
+
+  didSelectShop(shop) {
+    console.log("select shop : " + shop);
+
+    this.
   }
 
   fetchData() {
@@ -36,6 +45,7 @@ class ListViewShop extends React.Component {
         return new  CoffeeShop(currentItem);
       });
       this.setState({
+        coffees: coffees,
         dataSource: this.state.dataSource.cloneWithRows(coffees)
       });
     })
@@ -48,7 +58,12 @@ class ListViewShop extends React.Component {
 
   renderRow(currentRow) {
     return (
-      <ShopCell coffeeShop={currentRow}/>
+      <TouchableHighlight
+      onPress={() => this.didSelectShop(currentRow)}>
+        <View>
+          <ShopCell coffeeShop={currentRow}/>
+        </View>
+      </TouchableHighlight>
     );
   }
 
